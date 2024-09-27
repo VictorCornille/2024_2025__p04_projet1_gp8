@@ -1,4 +1,6 @@
-def bin_dec_hex__to__bin_dec_hex (init_number, init_base, target_base):
+def bin_dec_hex__to__bin_dec_hex (init_number,\
+                                   init_base,\
+                                      target_base):
     pass
     target_number = None
     return target_number
