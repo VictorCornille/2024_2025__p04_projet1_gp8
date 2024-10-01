@@ -1,3 +1,4 @@
+
 from data import*
 from main import*
 def check_valid_char(char):
