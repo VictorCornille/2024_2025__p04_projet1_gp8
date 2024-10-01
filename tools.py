@@ -4,18 +4,28 @@ from main import*
 def check_valid_char(char):
        return char in hex_valid_char
        
-def is_a_valid_number(number):
-    i=0
-    while is_valid_char:
-        is_valid_char = check_char_validity (number[i])
-        i= i +1   
-    return is_valid_char   
-                      
+ 
+def check_char_number_validity (char):
+    return char in hex_valid_char
 
-def ask_for_the_init_number(init_number):
+                      
+def is_a_valid_number (number):
+    i = 0
+    is_a_valid_char = True
+    while is_a_valid_char == True and i <= len (number) - 1:
+        is_a_valid_char = check_char_number_validity (number [i])
+        i = i + 1
+    return is_a_valid_char                     
+
+
+
+def ask_for_the_init_number ():
     init_number = input (ask_for_init_number_text)
-    while not ( a_valid_number (init_number)):
+    while not (is_a_valid_number (init_number)) == True:
         init_number = input (ask_again_for_init_number_text)
+    return init_number
+
+
 
 
 
