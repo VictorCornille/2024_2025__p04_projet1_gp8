@@ -1,6 +1,5 @@
 
 from data import*
-from main import*
 
 def check_valid_char(char):
        return char in hex_valid_char
@@ -27,7 +26,7 @@ def ask_for_the_init_number ():
     return init_number
 
 
-def decimal_to_bin (n,d):
+def decimal_o_hexadecimal_to_bin (n,d):
      restes=""
      q= n // d
      while q > 0 :
@@ -36,8 +35,6 @@ def decimal_to_bin (n,d):
           n = q
           q = n // 2
           return restes
-
-
 
 
 def ask_for_the_init_base ():
