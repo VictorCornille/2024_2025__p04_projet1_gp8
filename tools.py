@@ -1,6 +1,7 @@
 
 from data import*
 from main import*
+
 def check_valid_char(char):
        return char in hex_valid_char
        
@@ -26,24 +27,31 @@ def ask_for_the_init_number ():
     return init_number
 
 
-
+def decimal (n,d):
+     restes=""
+     q= n // d
+     while q > 0 :
+          reste = n % d
+          restes = reste + restes
+          n = q
+          q = n // 2
+          return restes
 
 
 
 
 def ask_for_the_init_base ():
+     pass
 #    si binaire alors =2
 #    si decimal alors =10
 #    si hexadecimal alors =16
     
        
 
- def ask_for_the_target_base():
+def ask_for_the_target_base():
      pass
- 
 
-
- def bin_dec_hex__to__bin_dec_hex (init_number, \
+def bin_dec_hex__to__bin_dec_hex (init_number, \
                                     init_base, \
                                     target_base):
      pass
