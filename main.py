@@ -1,12 +1,14 @@
+from tools import *
+from data import *
 
-def bin_dec_hex__to__bin_dec_hex (init_number, init_base, target_base):
-    pass
+def bin_dec_hex__to__bin_dec_hex (init_number,\
+                                   init_base,\
+                                      target_base):
     target_number = None
     return target_number
 
-from tools import *
-from data import *
-assert bin_dec_hex__to__bin_dec_hex ("101", 2, 10) == "5"
+
+# assert bin_dec_hex__to__bin_dec_hex ("101", 2, 10) == "5"
 
 def do_the_job ():
     init_number = ask_for_the_init_number ()
@@ -18,7 +20,3 @@ def do_the_job ():
                                     target_base)
 
 do_the_job ()
-
-
-
-
