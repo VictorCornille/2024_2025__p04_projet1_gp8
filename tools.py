@@ -40,6 +40,13 @@ def ask_for_the_init_base ():
 
  def ask_for_the_target_base():
      pass
+ 
+
+
+ def bin_dec_hex__to__bin_dec_hex (init_number, \
+                                    init_base, \
+                                    target_base):
+     pass
 #  Fonction 1 qui passe de binaire a decimal
 #  Fonction 2 qui passe de binaire a hexa
 #  Fonction 3 qui passe de decimal a binaire (l'inverse de la fonction 1)
