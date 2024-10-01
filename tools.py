@@ -27,7 +27,7 @@ def ask_for_the_init_number ():
     return init_number
 
 
-def decimal (n,d):
+def decimal_to_bin (n,d):
      restes=""
      q= n // d
      while q > 0 :
