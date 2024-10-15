@@ -24,16 +24,15 @@ def bin_dec_hex__to__bin_dec_hex(init_number, init_base, target_base):
             binary_number = str(decimal_number % 2) + binary_number
             decimal_number //= 2
         return binary_number
-    elif target_base == 16:  # Décimal à Hexadécimal
-        if decimal_number == 0:
+    elif target_base == 16:  # Décimal à Hexadécimal    
             return "0"
-        hex_number = ""
-        while decimal_number > 0:
+    hex_number = ""
+    while decimal_number > 0:
             hex_number = hex_valid_char[decimal_number % 16] + hex_number
             decimal_number //= 16
-        return hex_number
+            return hex_number
     else:
-        return None  # Base cible invalide
+         return None  # Base cible invalide
 
 
 def ask_for_the_init_number():
@@ -42,20 +41,20 @@ def ask_for_the_init_number():
 
 def ask_for_the_init_base():
     print("Choisissez la base d'origine:")
-    print("1: Binaire (bin)")
-    print("2: Décimal (dec)")
-    print("3: Hexadécimal (hex)")
+    print("1: Binaire (2)")
+    print("2: Décimal (10)")
+    print("3: Hexadécimal (16)")
     choice = int(input("Entrez votre choix (1/2/3): "))
-    return{1: 2, 2: 10, 3: 16}.get(choice, None)
+    return{1: 2, 2: 10, 3:16}.get(choice, None)
 
 
 def ask_for_the_target_base():
     print("Choisissez la base cible:")
-    print("1: Binaire (bin)")
-    print("2: Décimal (dec)")
-    print("3: Hexadécimal (hex)")
+    print("1: Binaire (2)")
+    print("2: Décimal (10)")
+    print("3: Hexadécimal (16)")
     choice = int(input("Entrez votre choix (1/2/3): "))
-    return {1: 2, 2:10 , 3: 16}.get(choice, None)
+    return {1:2, 2:10, 3:16}.get(choice, None)
 
 
 def do_the_job():
@@ -77,4 +76,3 @@ def do_the_job():
 
 if __name__ == "__main__":
     do_the_job()
-
