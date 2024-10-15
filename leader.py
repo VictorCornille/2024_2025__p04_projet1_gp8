@@ -5,5 +5,5 @@ from tools import*
 
 
 
-if __name__== "__main__":
-    do_the_job()
+
+do_the_job()
