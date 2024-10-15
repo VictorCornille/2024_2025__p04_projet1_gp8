@@ -1,5 +1,5 @@
-from tools import *
-from data import *
+from tools import*
+from data import*
 
 
 def bin_dec_hex__to__bin_dec_hex (init_number,\
