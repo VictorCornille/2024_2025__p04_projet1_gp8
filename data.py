@@ -1,4 +1,4 @@
-from leader import*
+from tools import*
 bin_valide_char = ["0","1"]
 dec_valide_char = ["0","1","2","3","4","5","6","7","8","9"]
 hex_valid_char =  dec_valide_char + ["A","B","C","D","E","F"]
@@ -36,7 +36,7 @@ def do_the_job():
         print("Choix de base invalide.")
         return
     
-    target_number = bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base)
+    target_number = bin_dec_hex_to_bin_dec_hex (init_number, init_base, target_base)
     
     if target_number is not None:
         print(f"Le nombre {init_number} en base {init_base} est {target_number} en base {target_base}.")
