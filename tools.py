@@ -25,7 +25,6 @@ def dec_to_hex(dec_number):
     if dec_number == 0:
         return "0"
     hex_number = ""
-    hex_valid_char = "0123456789abcdef"
     while dec_number > 0:
         hex_number = hex_valid_char[dec_number % 16] + hex_number
         dec_number //= 16
@@ -64,7 +63,6 @@ def bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base):
         return None  # Base cible invalide
 
 def check_valid_char(char):
-    hex_valid_char = "0123456789abcdef"
     return char in hex_valid_char
 
 def check_char_number_validity(char):
