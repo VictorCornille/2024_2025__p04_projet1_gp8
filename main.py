@@ -8,9 +8,21 @@ def bin_dec_hex_to_bin_dec_hex (init_number,\
     target_number = None
     return target_number
 
-    
-def ask_for_the_init_number():
-    return input("Entrez le nombre à convertir: ")
+
+
+
+def is_valid_number ():
+ if is_valid_number:
+      pass
+ else: 
+      print (ask_again_for_init_number_text)
+
+     
+         
+def ask_for_the_init_number(init_number):
+  return input("Entrez le nombre à convertir: ")
+if init_number is  valid_number
+
 
 
 def ask_for_the_init_base():
@@ -38,7 +50,6 @@ def do_the_job():
     if init_base is None or target_base is None:
             print("Choix de base invalide.")
     target_number = bin_dec_hex_to_bin_dec_hex (init_number, init_base, target_base)
-        
     if target_number is not None:
             print(f"Le nombre {init_number} en base {init_base} est {target_number} en base {target_base}.")
     else:
