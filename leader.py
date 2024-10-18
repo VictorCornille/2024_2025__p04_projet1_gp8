@@ -1,41 +1,65 @@
-from data import*
-from tools import*
-  # Base cible invalide
+def bin_to_dec(bin_number):
+    """Convertit un nombre binaire en décimal."""
+    return int(bin_number, 2)
+
+def dec_to_bin(dec_number):
+    """Convertit un nombre décimal en binaire."""
+    if dec_number == 0:
+        return "0"
+    binary_number = ""
+    while dec_number > 0:
+        binary_number = str(dec_number % 2) + binary_number
+        dec_number //= 2
+    return binary_number
+
+def hex_to_dec(hex_number):
+    """Convertit un nombre hexadécimal en décimal."""
+    return int(hex_number, 16)
+
+def dec_to_hex(dec_number):
+    """Convertit un nombre décimal en hexadécimal."""
+    if dec_number == 0:
+        return "0"
+    hex_number = ""
+    hex_valid_char = "0123456789abcdef"
+    while dec_number > 0:
+        hex_number = hex_valid_char[dec_number % 16] + hex_number
+        dec_number //= 16
+    return hex_number
+
+def bin_to_hex(bin_number):
+    """Convertit un nombre binaire en hexadécimal."""
+    decimal_number = bin_to_dec(bin_number)
+    return dec_to_hex(decimal_number)
+
+def hex_to_bin(hex_number):
+    """Convertit un nombre hexadécimal en binaire."""
+    decimal_number = hex_to_dec(hex_number)
+    return dec_to_bin(decimal_number)
 
 def bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base):
-    # Conversion en décimal
-    if init_base == 2:  # Binaire à Décimal
-        decimal_number = 0
-        for i, number in enumerate(reversed(init_number)):
-            decimal_number += int(number) * (2 ** i)
-    elif init_base == 10:  # Décimal à Décimal
-        decimal_number = int(init_number)  # On peut directement utiliser int
-    elif init_base == 16:  # Hexadécimal à Décimal
-        decimal_number = 0
-        for i, number in enumerate(reversed(init_number.lower())):
-            decimal_number += hex_number.index(number) * (16 ** i)
+    """Convertit un nombre entre les bases binaire, décimale et hexadécimale."""
+    if init_base == 2:
+        decimal_number = bin_to_dec(init_number)
+    elif init_base == 10:
+        decimal_number = int(init_number)
+    elif init_base == 16:
+        decimal_number = hex_to_dec(init_number)
     else:
         return None  # Base invalide
 
-    # Conversion vers la base cible
-    if target_base == 2:  # Décimal à Binaire
-        if decimal_number == 0:
-            return "0"
-        binary_number = ""
-        while decimal_number > 0:
-            binary_number = str(decimal_number % 2) + binary_number
-            decimal_number //= 2
-        return binary_number
-    elif target_base == 16:  # Décimal à Hexadécimal    
-            return "0"
-    hex_number = ""
-    while decimal_number > 0:
-            hex_number = hex_valid_char[decimal_number % 16] + hex_number
-            decimal_number //= 16
-            return hex_number
+    if target_base == 2:
+        return dec_to_bin(decimal_number)
+    elif target_base == 10:
+        return str(decimal_number)
+    elif target_base == 16:
+        return dec_to_hex(decimal_number)
     else:
-         return None  # Base cible invalide
+        return None  # Base cible invalide
 
+def check_valid_char(char):
+    hex_valid_char = "0123456789abcdef"
+    return char in hex_valid_char
 
-
-do_the_job()
+def check_char_number_validity(char):
+    return check_valid_char(char)
