@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-=======
+# Convertit un nombre binaire en décimal
 def bin_to_dec(bin_number):
-    """Convertit un nombre binaire en décimal."""
     return int(bin_number, 2)
 
+# Convertit un nombre décimal en binaire
 def dec_to_bin(dec_number):
-    """Convertit un nombre décimal en binaire."""
     if dec_number == 0:
         return "0"
     binary_number = ""
@@ -14,12 +12,13 @@ def dec_to_bin(dec_number):
         dec_number //= 2
     return binary_number
 
+# Convertit un nombre hexadécimal en décimal
 def hex_to_dec(hex_number):
-    """Convertit un nombre hexadécimal en décimal."""
     return int(hex_number, 16)
+ 
 
+# Convertit un nombre décimal en hexadécimal
 def dec_to_hex(dec_number):
-    """Convertit un nombre décimal en hexadécimal."""
     if dec_number == 0:
         return "0"
     hex_number = ""
@@ -28,19 +27,21 @@ def dec_to_hex(dec_number):
         hex_number = hex_valid_char[dec_number % 16] + hex_number
         dec_number //= 16
     return hex_number
-
+ 
+ # Convertit un nombre binaire en hexadécimal
 def bin_to_hex(bin_number):
-    """Convertit un nombre binaire en hexadécimal."""
     decimal_number = bin_to_dec(bin_number)
     return dec_to_hex(decimal_number)
 
+
+# Convertit un nombre hexadécimal en binaire
 def hex_to_bin(hex_number):
-    """Convertit un nombre hexadécimal en binaire."""
     decimal_number = hex_to_dec(hex_number)
     return dec_to_bin(decimal_number)
 
+
+# Convertit un nombre entre les bases binaire, décimale et hexadécimale
 def bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base):
-    """Convertit un nombre entre les bases binaire, décimale et hexadécimale."""
     if init_base == 2:
         decimal_number = bin_to_dec(init_number)
     elif init_base == 10:
@@ -65,4 +66,3 @@ def check_valid_char(char):
 
 def check_char_number_validity(char):
     return check_valid_char(char)
->>>>>>> cffb11d1f2649666524010e56f309849c3a1e583
