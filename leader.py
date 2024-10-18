@@ -37,5 +37,5 @@ def bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base):
          return None  # Base cible invalide
 
 
-if __name__== "__main__":
-    do_the_job()
+
+do_the_job()
