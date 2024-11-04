@@ -2,43 +2,36 @@ from tools import*
 from data import*
 
 
-def bin_dec_hex_to_bin_dec_hex (init_number,\
-                                   init_base,\
-                                      target_base):
-    target_number = None
-    return target_number
+# def bin_dec_hex_to_bin_dec_hex (init_number,\
+#                                    init_base,\
+#                                       target_base):
+#     target_number = None
+#     return target_number
 
 
-
-
-def is_valid_number ():
- if is_valid_number:
-      pass
- else: 
-      print (ask_again_for_init_number_text)
-
-     
          
-def ask_for_the_init_number(init_number):
-  return input("Entrez le nombre à convertir: ")
-if init_number is  valid_number
-
+         
+def ask_for_the_init_number():
+    init_number = input("Entrez le nombre à convertir: ")
+    while is_not_valid_number(init_number):
+        init_number = input("Entrez un autre nombre à convertir: ")
+    return init_number
 
 
 def ask_for_the_init_base():
     print("Choisissez la base d'origine:")
-    print("1: Binaire (2)")
-    print("2: Décimal (10)")
-    print("3: Hexadécimal (16)")
+    print("   1: Binaire (2)")
+    print("   2: Décimal (10)")
+    print("   3: Hexadécimal (16)")
     choice = int(input("Entrez votre choix (1/2/3): "))
-    return{1: 2, 2: 10, 3:16}.get(choice, None)
+    return{1:2, 2:10, 3:16}.get(choice, None)
 
 
 def ask_for_the_target_base():
     print("Choisissez la base cible:")
-    print("1: Binaire (2)")
-    print("2: Décimal (10)")
-    print("3: Hexadécimal (16)")
+    print("   1: Binaire (2)")
+    print("   2: Décimal (10)")
+    print("   3: Hexadécimal (16)")
     choice = int(input("Entrez votre choix (1/2/3): "))
     return {1:2, 2:10, 3:16}.get(choice, None)
 
