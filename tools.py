@@ -1,6 +1,6 @@
 
 from data import*
-from main import*
+# from main import*
 # Convertit un nombre binaire en décimal
 def bin_to_dec(bin_number):
     return int(bin_number, 2)
@@ -71,4 +71,10 @@ def check_char_number_validity(char):
 
 
 
-  
+def is_not_valid_number(init_number):
+    for char in init_number:
+        valid_number= char in valid_chars
+        if valid_number == False:
+            return True
+        return False
+
