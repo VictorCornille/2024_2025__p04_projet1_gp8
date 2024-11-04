@@ -69,8 +69,6 @@ def check_char_number_validity(char):
     return check_valid_char(char)
 
 
-
-
 def is_not_valid_number(init_number):
     for char in init_number:
         valid_number= char in valid_chars
