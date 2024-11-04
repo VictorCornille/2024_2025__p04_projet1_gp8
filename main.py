@@ -38,6 +38,7 @@ def do_the_job():
             print(f"Le nombre {init_number} en base {init_base} est {target_number} en base {target_base}.")
     else:
             print("Erreur dans la conversion.")
+            
 
 
 do_the_job ()
