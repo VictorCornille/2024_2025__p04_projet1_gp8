@@ -2,3 +2,6 @@
 Victor Cornille,
 Victor Causse,
 Cyprien Carlot
+
+Dans le data on a définis ce à quoi le binaire, le décimal et le hexadécimal correspondaient
+
