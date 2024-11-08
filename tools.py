@@ -1,6 +1,6 @@
 
 from data import*
-# from main import*
+
 # Convertit un nombre binaire en décimal
 def bin_to_dec(bin_number):
     return int(bin_number, 2)
