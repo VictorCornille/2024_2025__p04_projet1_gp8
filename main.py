@@ -1,14 +1,11 @@
-
 from tools import*
 from data import*
        
-         
 def ask_for_the_init_number():
     init_number = input("Entrez le nombre à convertir: ")
     while is_not_valid_number(init_number):
         init_number = input("Entrez un autre nombre à convertir: ")
     return init_number
-
 
 def ask_for_the_init_base():
     print("Choisissez la base d'origine:")
@@ -18,7 +15,6 @@ def ask_for_the_init_base():
     choice = int(input("Entrez votre choix (1/2/3): "))
     return{1:2, 2:10, 3:16}.get(choice, None)
 
-
 def ask_for_the_target_base():
     print("Choisissez la base cible:")
     print("   1: Binaire (2)")
@@ -26,7 +22,6 @@ def ask_for_the_target_base():
     print("   3: Hexadécimal (16)")
     choice = int(input("Entrez votre choix (1/2/3): "))
     return {1:2, 2:10, 3:16}.get(choice, None)
-
 
 def do_the_job():
     init_number = ask_for_the_init_number()
@@ -39,7 +34,5 @@ def do_the_job():
             print(f"Le nombre {init_number} en base {init_base} est {target_number} en base {target_base}.")
     else:
             print("Erreur dans la conversion.")
-            
-
 
 do_the_job ()
